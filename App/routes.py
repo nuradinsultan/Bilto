@@ -2,6 +2,7 @@ from flask import render_template, flash, redirect, url_for
 from app import app
 from app.forms import LoginForm, RegistrationForm
 from flask_login import current_user, login_user
+from datetime import datetime
 from app.models import User
 from flask_login import logout_user
 from flask import request
@@ -53,3 +54,9 @@ def register():
         flash('Congratulations, you are now a registered user!')
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
+
+@app.before_request
+def before_request():
+    if current_user.is_authenticated:
+        current_user.last_seen = datetime.utcnow()
+        db.session.commit()
