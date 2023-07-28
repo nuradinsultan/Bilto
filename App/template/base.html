@@ -1,1 +1,15 @@
-
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} -Bilget</title>
+      {% else %}
+      <title>Welcome to Bilget SEP</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>bilget: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
