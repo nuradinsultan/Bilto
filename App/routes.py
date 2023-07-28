@@ -21,8 +21,6 @@ def login():
     if form.validate_on_submit():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
-            from flask_login import logout_user
-
 @app.route('/logout')
 def logout():
     logout_user()
