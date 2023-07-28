@@ -9,3 +9,4 @@ flask run
 pip install flask-sqlalchemy
 pip install flask-migrate
 flask db init
+pip install email-validator
