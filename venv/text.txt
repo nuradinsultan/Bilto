@@ -10,4 +10,5 @@ pip install flask-sqlalchemy
 pip install flask-migrate
 flask db init
 pip install email-validator
-flask db migrate -m "new fields in user model
+flask db migrate -m "new fields in user model"
+flask db upgrade
