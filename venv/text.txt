@@ -12,3 +12,4 @@ flask db init
 pip install email-validator
 flask db migrate -m "new fields in user model"
 flask db upgrade
+export FLASK_ENV=development
