@@ -13,7 +13,7 @@ from flask_login import login_required
 @login_required
 def index():
     user = {'username': ''}
-    return render_template('base.html', title='Home', user=user ""
+    return render_template("index.html", title='Home Page', posts=posts)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
