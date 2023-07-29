@@ -1,3 +1,4 @@
+#!/usr/bin/env python 
 import os
 os.environ['DATABASE_URL'] = 'sqlite://'
 
