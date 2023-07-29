@@ -20,15 +20,15 @@ class User(UserMixin, db.Model):
         primaryjoin=(followers.c.follower_id == id),
         secondaryjoin=(followers.c.followed_id == id),
         backref=db.backref('followers', lazy='dynamic'), lazy='dynamic')   
-    
+
+    def __repr__(self):
+        return '<User {}>'.format(self.username)
+        
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
-
-    def __repr__(self):
-        return '<User {}>'.format(self.username)
 
    def avatar(self, size):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
