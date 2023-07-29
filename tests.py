@@ -19,20 +19,20 @@ class UserModelCase(unittest.TestCase):
         self.app_context.pop()
 
     def test_password_hashing(self):
-        u = User(username='susan')
+        u = User(username='Nimona')
         u.set_password('cat')
         self.assertFalse(u.check_password('dog'))
         self.assertTrue(u.check_password('cat'))
 
     def test_avatar(self):
-        u = User(username='john', email='john@example.com')
+        u = User(username='nuradin', email='finw7088@gmail.com')
         self.assertEqual(u.avatar(128), ('https://www.gravatar.com/avatar/'
                                          'd4c74594d841139328695756648b6bd6'
                                          '?d=identicon&s=128'))
 
     def test_follow(self):
-        u1 = User(username='john', email='john@example.com')
-        u2 = User(username='susan', email='susan@example.com')
+        u1 = User(username='nuradin', email='finw7088@gmail.com')
+        u2 = User(username='nimona', email='nuradinsultam2@gmail.com')
         db.session.add(u1)
         db.session.add(u2)
         db.session.commit()
@@ -43,9 +43,9 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
         self.assertTrue(u1.is_following(u2))
         self.assertEqual(u1.followed.count(), 1)
-        self.assertEqual(u1.followed.first().username, 'susan')
+        self.assertEqual(u1.followed.first().username, 'nimona')
         self.assertEqual(u2.followers.count(), 1)
-        self.assertEqual(u2.followers.first().username, 'john')
+        self.assertEqual(u2.followers.first().username, 'nuradin')
 
         u1.unfollow(u2)
         db.session.commit()
@@ -55,8 +55,8 @@ class UserModelCase(unittest.TestCase):
 
     def test_follow_posts(self):
         # create four users
-        u1 = User(username='john', email='john@example.com')
-        u2 = User(username='susan', email='susan@example.com')
+        u1 = User(username='nuradin', email='finw7088@gmail.com')
+        u2 = User(username='nimona', email='nuradinsultan2@gmail.com')
         u3 = User(username='mary', email='mary@example.com')
         u4 = User(username='david', email='david@example.com')
         db.session.add_all([u1, u2, u3, u4])
@@ -75,9 +75,9 @@ class UserModelCase(unittest.TestCase):
         db.session.commit()
 
         # setup the followers
-        u1.follow(u2)  # john follows susan
-        u1.follow(u4)  # john follows david
-        u2.follow(u3)  # susan follows mary
+        u1.follow(u2)  # nuradin  follows susan
+        u1.follow(u4)  # nuradin follows david
+        u2.follow(u3)  # nimona follows mary
         u3.follow(u4)  # mary follows david
         db.session.commit()
 
