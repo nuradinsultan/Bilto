@@ -1,8 +1,7 @@
 from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-from app import routes, models, errors 
+from flask_migrate import Migrate 
 import logging
 from logging.handlers import SMTPHandler
 
@@ -29,3 +28,4 @@ if not app.debug:
             credentials=auth, secure=secure)
         mail_handler.setLevel(logging.ERROR)
         app.logger.addHandler(mail_handler)
+from app import routes, models, errors
