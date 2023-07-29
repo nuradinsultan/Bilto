@@ -20,12 +20,12 @@ def before_request():
 def index():
     posts = [
         {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'author': {'username': 'Nimona'},
+            'body': 'Beautiful day in Adama!'
         },
         {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
+            'author': {'username': 'Marsimo'},
+            'body': 'The Python programming was so cool!'
         }
     ]
     return render_template('index.html', title='Home', posts=posts)
