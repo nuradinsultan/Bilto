@@ -1,14 +1,14 @@
-# Spanish translations for PROJECT.
-# Copyright (C) 2017 ORGANIZATION
+# Amharic translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+# FIRST AUTHOR <nuradinsultan2@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-11-25 18:23-0800\n"
-"PO-Revision-Date: 2017-09-29 23:25-0700\n"
+"Report-Msgid-Bugs-To: nuradinsultan2@gmail.com\n"
+"POT-Creation-Date: 2023-08-25 18:23-0800\n"
+"PO-Revision-Date: 2023-08-29 23:25-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
 "Language-Team: es <LL@li.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: app/__init__.py:18
 msgid "Please log in to access this page."
-msgstr "Por favor ingrese para acceder a esta página."
+msgstr "እባክዎ ይህን ገጽ ለመድረስ ይግቡ፡፡"
 
 #: app/translate.py:10
 msgid "Error: the translation service is not configured."
@@ -28,63 +28,63 @@ msgstr "Error: el servicio de traducciones no está configurado."
 
 #: app/translate.py:18
 msgid "Error: the translation service failed."
-msgstr "Error el servicio de traducciones ha fallado."
+msgstr "ስህተት፡ የትርጉም አገልግሎቱ አልተዋቀረም።"
 
 #: app/auth/email.py:8
-msgid "[Microblog] Reset Your Password"
-msgstr "[Microblog] Nueva Contraseña"
+msgid "[Bilget] Reset Your Password"
+msgstr "[Bilget] የይለፍ ቃልዎን ዳግም ያስጀምሩ፡፡"
 
 #: app/auth/forms.py:10 app/auth/forms.py:17 app/main/forms.py:10
 msgid "Username"
-msgstr "Nombre de usuario"
+msgstr "የተጠቃሚ ስም"
 
 #: app/auth/forms.py:11 app/auth/forms.py:19 app/auth/forms.py:42
 msgid "Password"
-msgstr "Contraseña"
+msgstr "የይለፍ ቃል"
 
 #: app/auth/forms.py:12
 msgid "Remember Me"
-msgstr "Recordarme"
+msgstr "አስታወስከኝ"
 
 #: app/auth/forms.py:13 app/templates/auth/login.html:5
 msgid "Sign In"
-msgstr "Ingresar"
+msgstr "ስግን እን"
 
 #: app/auth/forms.py:18 app/auth/forms.py:37
 msgid "Email"
-msgstr "Email"
+msgstr "ኢሜይል"
 
 #: app/auth/forms.py:21 app/auth/forms.py:44
 msgid "Repeat Password"
-msgstr "Repetir Contraseña"
+msgstr "የማለፊያ ቃልዎን ይድገሙ"
 
 #: app/auth/forms.py:23 app/templates/auth/register.html:5
 msgid "Register"
-msgstr "Registrarse"
+msgstr "ይመዝገቡ"
 
 #: app/auth/forms.py:28 app/main/forms.py:23
 msgid "Please use a different username."
-msgstr "Por favor use un nombre de usuario diferente."
+msgstr "እባክዎ የተለየ የተጠቃሚ ስም ይጠቀሙ።"
 
 #: app/auth/forms.py:33
 msgid "Please use a different email address."
-msgstr "Por favor use una dirección de email diferente."
+msgstr "እባክዎ የተለየ የኢሜይል አድራሻ ይጠቀሙ።"
 
 #: app/auth/forms.py:38 app/auth/forms.py:46
 msgid "Request Password Reset"
-msgstr "Pedir una nueva contraseña"
+msgstr "የይለፍ ቃል ዳግም ማስጀመር ጠይቅ"
 
 #: app/auth/routes.py:20
 msgid "Invalid username or password"
-msgstr "Nombre de usuario o contraseña inválidos"
+msgstr "ልክ ያልሆነ የተጠቃሚ ስም ወይም የይለፍ ቃል"
 
 #: app/auth/routes.py:46
 msgid "Congratulations, you are now a registered user!"
-msgstr "¡Felicitaciones, ya eres un usuario registrado!"
+msgstr "እንኳን ደስ አለህ፣ አሁን የተመዘገበ ተጠቃሚ ነህ!"
 
 #: app/auth/routes.py:61
 msgid "Check your email for the instructions to reset your password"
-msgstr "Busca en tu email las instrucciones para crear una nueva contraseña"
+msgstr "የይለፍ ቃልዎን እንደገና ለማስጀመር መመሪያዎችን ለማግኘት ኢሜልዎን ያረጋግጡ"
 
 #: app/auth/routes.py:78
 msgid "Your password has been reset."
